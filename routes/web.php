@@ -7,7 +7,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\AnnyController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\OficinaController;
-
+use App\Http\Controllers\PedidosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -44,4 +44,10 @@ Route::get('/clientes',
 
 Route::get('/oficinas', 
     [OficinaController::class, 'listar']
+);
+
+//Creamos una ruta para listar pedidos, en la parte de arriba ↑
+
+Route::get('/pedidos', 
+    [PedidosController::class, 'listar']
 );
