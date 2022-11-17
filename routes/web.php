@@ -21,4 +21,16 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/clientes', function () {
+    return view('clientes');
+})->middleware(['auth'])->name('clientes');
+
+Route::get('/empleados', function () {
+    return view('empleados');
+})->middleware(['auth'])->name('empleados');
+
+Route::get('/ventas', function () {
+    return view('ventas');
+})->middleware(['auth'])->name('ventas');
+
 require __DIR__.'/auth.php';
