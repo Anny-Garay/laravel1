@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\EmpleadosController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,13 +24,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/clientes', function () {
-    return view('clientes');
-})->middleware(['auth'])->name('clientes');
+Route::get('/clientes',[CustomerController::class,'index'] )->middleware(['auth'])->name('clientes');
 
-Route::get('/empleados', function () {
-    return view('empleados');
-})->middleware(['auth'])->name('empleados');
+Route::get('/empleados',[EmpleadosController::class,'index'])->middleware(['auth'])->name('empleados');
 
 Route::get('/ventas', function () {
     return view('ventas');

@@ -13,40 +13,21 @@
                         <tr>
                             <th>Nombre</th>
                             <th>Apellidos</th>
-                            <th>Telefono</th>
+                            <th>Número de Empleado</th>
                             <th>Email</th>
                             <th>Acciones</th>
                         </tr>
+                        @foreach ($listado as $empleados)
                         <tr>
-                            <td>Michina</td>
-                            <td>Garay</td>
-                            <td>2679107</td>
-                            <td>annyloyz@gmail.com</td>
+                            <td>{{$empleados -> firstName}}</td>
+                            <td>{{$empleados -> lastName}}</td>
+                            <td>{{$empleados -> employeeNumber}}</td>
+                            <td>{{$empleados -> email}}</td>
                             <td>
                                 <a href="#" class="btn btn-success">Editar</a>
                                 <a href="#" class="btn btn-danger">Eliminar</a>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>Michina</td>
-                            <td>Garay</td>
-                            <td>2679107</td>
-                            <td>annyloyz@gmail.com</td>
-                            <td>
-                                <a href="#" class="btn btn-success">Editar</a>
-                                <a href="#" class="btn btn-danger">Eliminar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Michina</td>
-                            <td>Garay</td>
-                            <td>2679107</td>
-                            <td>annyloyz@gmail.com</td>
-                            <td>
-                                <a href="#" class="btn btn-success">Editar</a>
-                                <a href="#" class="btn btn-danger">Eliminar</a>
-                            </td>
-                        </tr>
+                        @endforeach
                     </table>
 
                 </div>

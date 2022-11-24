@@ -17,38 +17,20 @@
                             <th>Apellidos</th>
                             <th>Telefono</th>
                             <th>Email</th>
-                            <th>Acciones</th>
+                            <th>Ciudad</th>
                         </tr>
+                        @foreach ($listado as $cliente)
                         <tr>
-                            <td>Anny</td>
-                            <td>Garay</td>
-                            <td>2679107</td>
-                            <td>annyloyz@gmail.com</td>
+                            <td>{{$cliente -> contactFirstName}}</td>
+                            <td>{{$cliente -> contactLastName}}}</td>
+                            <td>{{$cliente -> phone}}</td>
+                            <td>{{$cliente -> city}}</td>
                             <td>
                                 <a href="#" class="btn btn-success">Editar</a>
                                 <a href="#" class="btn btn-danger">Eliminar</a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>Anny</td>
-                            <td>Garay</td>
-                            <td>2679107</td>
-                            <td>annyloyz@gmail.com</td>
-                            <td>
-                                <a href="#" class="btn btn-success">Editar</a>
-                                <a href="#" class="btn btn-danger">Eliminar</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Anny</td>
-                            <td>Garay</td>
-                            <td>2679107</td>
-                            <td>annyloyz@gmail.com</td>
-                            <td>
-                                <a href="#" class="btn btn-success">Editar</a>
-                                <a href="#" class="btn btn-danger">Eliminar</a>
-                            </td>
-                        </tr>
+                        @endforeach
                     </table>
 
 
