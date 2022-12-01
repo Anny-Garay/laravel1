@@ -32,4 +32,8 @@ Route::get('/ventas', function () {
     return view('ventas');
 })->middleware(['auth'])->name('ventas');
 
+Route::get('/clientes/registrar',[CustomerController::class,'registrar'])->middleware(['auth'])->name('clientes.registrar');
+
+Route::post('/clientes/guardar',[CustomerController::class,'guardar'])->middleware(['auth'])->name('clientes.guardar');
+
 require __DIR__.'/auth.php';
