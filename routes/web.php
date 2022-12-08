@@ -34,6 +34,10 @@ Route::get('/ventas', function () {
 
 Route::get('/clientes/registrar',[CustomerController::class,'registrar'])->middleware(['auth'])->name('clientes.registrar');
 
+Route::get('/clientes/actualizar/{id}',[CustomerController::class,'actualizar'])->middleware(['auth'])->name('clientes.actualizar');
+
 Route::post('/clientes/guardar',[CustomerController::class,'guardar'])->middleware(['auth'])->name('clientes.guardar');
+
+Route::post('/clientes/editar/{id}',[CustomerController::class,'editar'])->middleware(['auth'])->name('clientes.editar');
 
 require __DIR__.'/auth.php';

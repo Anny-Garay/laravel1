@@ -11,18 +11,18 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                 
-                <form method="POST" action="/clientes/guardar">
+                <form method="POST" action="/clientes/editar/{{ $cliente->customerNumber }}">
                 @csrf  
                     <label class="mt-3">Nombre</label>
-                    <input type="text" name="contactFirstName" class="form-control">
+                    <input type="text" name="contactFirstName" class="form-control" value="{{$cliente->contactFirstName}}">
                     <label class="mt-3">Apellido</label>
-                    <input type="text" name="contactLastName" class="form-control">
+                    <input type="text" name="contactLastName" class="form-control" value="{{$cliente->contactLastName}}">
                     <label class="mt-3">Telefono</label>
-                    <input type="text" name="             " class="form-control">
+                    <input type="text" name="phone" class="form-control" value="{{$cliente->phone}}">
                     <label class="mt-3">Ciudad</label>
-                    <input type="text" name="city" class="form-control">
+                    <input type="text" name="city" class="form-control" value="{{$cliente->city}}">
 
-                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
                 </form>
 
                 </div>
